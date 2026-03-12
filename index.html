@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio | Leonardo Cardinali</title>
      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap');
         :root {
             --primary: #fbbf24;
             --dark: #020617;
@@ -19,9 +20,10 @@
             background-image: url('img/sfondo2.jpg');
             
             /* 3. Parametri di ripetizione e posizionamento */
-            background-repeat: repeat;
+            background-repeat: no-repeat;
             background-attachment: fixed;
-            background-size: 200px; 
+            background-position: center center;
+            background-size: cover; 
             
             font-family: ui-sans-serif, system-ui, sans-serif;
             line-height: 1.6;
@@ -29,10 +31,35 @@
             color: var(--dark);
         }
         header {
-            background: var(--dark);
+            /* Combinazione di immagine e overlay scuro per leggibilità */
+            background: linear-gradient(rgba(2, 6, 23, 0.7), rgba(2, 6, 23, 0.7)), 
+                        url('img/header-bg.jpg');
+            
+            background-size: cover;
+            background-position: center;
             color: white;
-            padding: 2rem 0;
+            padding: 5rem 2rem; /* Aumentato lo spazio verticale */
             text-align: center;
+            border-bottom: 4px solid var(--primary);
+        }
+        
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 3.5rem; /* Dimensione massimizzata */
+            text-transform: uppercase;
+            letter-spacing: -1px; /* Compressione del kerning per look moderno */
+            margin: 0;
+            line-height: 1.1;
+        }
+        
+        header p {
+            font-family: ui-sans-serif, system-ui, sans-serif;
+            font-size: 1.2rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-top: 1rem;
+            color: var(--primary); /* Colore giallo vibrante per il sottotitolo */
         }
         nav {
             position: sticky;
